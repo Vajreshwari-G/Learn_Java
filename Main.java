@@ -223,3 +223,119 @@
 //     }
 // }
 
+//Union of 2 Sorted Arrays
+// import java.util.ArrayList;
+// import java.util.Arrays;
+// import java.util.List;
+
+// public class Main
+// {
+//     public static List<Integer> findUnion(int[] arr1, int[] arr2)
+//     {
+//         List<Integer> union = new ArrayList<>();
+//         int i = 0, j = 0;
+//         int n = arr1.length;
+//         int m = arr2.length;
+
+//         while(i<n && j<m)
+//         {
+//             if(arr1[i] <= arr2[j])
+//             {
+//                 if(union.isEmpty()||union.get(union.size()-1) != arr1[i])
+//                 {
+//                     union.add(arr1[i]);
+//                 }
+//                 i++;
+//             }else{
+//                 if(union.isEmpty()||union.get(union.size()-1) != arr2[j])
+//                 {
+//                     union.add(arr2[j]);
+//                 }
+//                 j++;
+//             }
+//         }
+//         while(i<n)
+//         {
+//             if(union.get(union.size()-1) != arr1[i])
+//             {
+//                 union.add(arr1[i]);
+//             }
+//             i++;
+//         }
+//         while(j<m)
+//         {
+//             if(union.get(union.size()-1) != arr2[j])
+//             {
+//                 union.add(arr2[j]);
+//             }
+//             j++;
+//         }
+//         return union;
+//     }
+//     public static void main(String[] args)
+//     {
+//         int[] arr1 = {1,1,2,2,4};
+//         int[] arr2 = {2,2,4,5,6};
+//         List<Integer> result = findUnion(arr1, arr2);
+//         System.out.println("Union:" + result);
+
+//     }
+// }
+
+//Find Missing Number
+// public class Main {
+//     public static int missingNum(int[] arr) {
+//         int n = arr.length + 1;
+
+        // Iterate from 1 to n and check
+        // if the current number is present
+        // for (int i = 1; i <= n; i++) {
+        //     boolean found = false;
+        //     for (int j = 0; j < n - 1; j++) {
+        //         if (arr[j] == i) {
+        //             found = true;
+        //             break;
+        //         }
+        //     }
+
+            // If the current number is not present
+//             if (!found)
+//                 return i;
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {8, 2, 4, 5, 3, 7, 1};  
+//         System.out.println(missingNum(arr));
+//     }
+// }
+
+//Kadane's Algorithm
+// import java.util.Arrays;
+
+// public class Main {
+
+//     public static int maxSubarraySum(int[] arr) {
+//         int res = arr[0];
+  
+        // Outer loop for starting point of subarray
+        // for (int i = 0; i < arr.length; i++) {
+        //     int currSum = 0;
+      
+            // Inner loop for ending point of subarray
+            // for (int j = i; j < arr.length; j++) {
+            //     currSum = currSum + arr[j];
+              
+                // Update res if currSum is greater than res
+//                 res = Math.max(res, currSum);
+//             }
+//         }
+//         return res;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {2, 3, -8, 7, -1, 2, 3};
+//         System.out.println(maxSubarraySum(arr));
+//     }
+// }
